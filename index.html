@@ -1,0 +1,570 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Personal Portfolio</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind = {};
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        neon: '#00ffa3',
+                        primary: '#7c3aed',
+                        accent: '#06b6d4'
+                    },
+                    keyframes: {
+                        fadeIn: {
+                            '0%': { opacity: '0', transform: 'translateY(12px)' },
+                            '100%': { opacity: '1', transform: 'translateY(0)' }
+                        },
+                        floaty: {
+                            '0%': { transform: 'translateY(0)' },
+                            '50%': { transform: 'translateY(-6px)' },
+                            '100%': { transform: 'translateY(0)' }
+                        }
+                    },
+                    animation: {
+                        fadeIn: 'fadeIn 600ms cubic-bezier(.22,.9,.36,1) both',
+                        floaty: 'floaty 3s ease-in-out infinite'
+                    }
+                }
+            }
+        }
+    </script>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+        :root {
+            --glass: rgba(255, 255, 255, 0.06);
+            --glass-2: rgba(255, 255, 255, 0.03);
+        }
+
+        body {
+            font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+        }
+
+        .neon-text {
+            background: linear-gradient(90deg, #00ffa3, #06b6d4);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+
+        .glass {
+            background: linear-gradient(180deg, rgba(255, 255, 255, 0.02), rgba(255, 255, 255, 0.01));
+            backdrop-filter: blur(6px);
+        }
+
+        /* profile ring */
+        .ring-gradient {
+            background: conic-gradient(from 180deg at 50% 50%, #7c3aed, #06b6d4, #00ffa3, #7c3aed);
+            padding: 3px;
+            border-radius: 9999px;
+        }
+    </style>
+</head>
+
+<body class="min-h-screen bg-gradient-to-b from-[#061021] via-[#071026] to-[#08111a] text-slate-100 antialiased">
+
+    <!-- Header -->
+    <header class="fixed w-full top-0 z-30">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="#home" class="flex items-center gap-3">
+                <div class="w-10 h-10 rounded-full ring-gradient flex items-center justify-center">
+                    <div
+                        class="w-9 h-9 rounded-full bg-[#071028] flex items-center justify-center text-sm font-bold text-white">
+                        AG</div>
+                </div>
+                <div class="hidden sm:block">
+                    <div class="text-sm font-semibold">Aswin G</div>
+                    <div class="text-xs text-slate-400">Full stack Developer</div>
+                </div>
+            </a>
+
+            <nav class="hidden md:flex gap-6 items-center text-sm font-medium">
+                <a href="#home" class="px-3 py-2 rounded-md hover:scale-105 transform transition duration-200">Home</a>
+                <a href="#skills"
+                    class="px-3 py-2 rounded-md hover:scale-105 transform transition duration-200">Skills</a>
+                <a href="#projects"
+                    class="px-3 py-2 rounded-md hover:scale-105 transform transition duration-200">Projects</a>
+                <a href="#contact"
+                    class="px-3 py-2 rounded-md bg-gradient-to-r from-primary to-accent text-white shadow-lg hover:brightness-105 transition">Contact</a>
+            </nav>
+
+            <div class="md:hidden">
+                <a href="#contact"
+                    class="px-3 py-2 rounded-md bg-gradient-to-r from-primary to-accent text-white text-sm">Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="pt-28 max-w-6xl mx-auto px-6">
+
+        <!-- Hero -->
+        <section id="home" class="grid grid-cols-1 md:grid-cols-2 gap-10 items-center py-16">
+            <div class="space-y-6 animate-fadeIn">
+                <p
+                    class="inline-block px-3 py-1 rounded-full text-sm font-semibold bg-gradient-to-r from-purple-700 to-cyan-600/40 text-white/90">
+                    Hi, I'm a Full-Stack Developer
+                </p>
+
+                <h1 class="text-4xl sm:text-5xl font-extrabold leading-tight">
+                    Building scalable <span class="neon-text">web experiences</span> with modern frameworks
+                </h1>
+
+                <p class="text-slate-300 max-w-xl">
+                    Full-stack web developer with expertise in <strong>React.js, Next.js, Laravel</strong>, and backend
+                    integrations.
+                    Experienced in building <strong>eCommerce websites, SaaS platforms,</strong> and corporate portals
+                    with a focus on
+                    <strong>SEO (SSR), REST APIs, responsive UI,</strong> and secure backend development.
+                    Skilled in <strong>payment gateway integrations, middleware,</strong> and designing <strong>scalable
+                        architectures.</strong>
+                </p>
+
+                <div class="flex items-center gap-4">
+                    <a href="#"
+                        class="inline-flex items-center gap-3 bg-gradient-to-r from-primary to-accent px-5 py-3 rounded-full text-sm font-semibold shadow-lg hover:translate-y-[-2px] transform transition">
+                        Download CV
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 16v2a2 2 0 002 2h12a2 2 0 002-2v-2M7 10l5 5 5-5M12 15V3" />
+                        </svg>
+                    </a>
+                    <a href="#projects" class="text-sm text-slate-300 px-3 py-2 rounded-md hover:underline">See my work
+                        →</a>
+                </div>
+
+                <div class="mt-3 flex gap-3 text-xs text-slate-400">
+                    <span class="inline-flex items-center gap-2">
+                        <span class="w-2 h-2 rounded-full bg-neon/80 shadow-[0_0_12px_rgba(0,255,163,0.18)]"></span>
+                        Open to work
+                    </span>
+                    <span class="inline-flex items-center gap-2">Based in <strong
+                            class="text-white">Remote</strong></span>
+                </div>
+            </div>
+
+            <div class="flex justify-center md:justify-end">
+                <div class="ring-gradient animate-floaty">
+                    <img src="/assest/photo.jpg" alt="Profile"
+                        class="w-64 h-64 sm:w-72 sm:h-72 object-fit rounded-full border border-white/5 shadow-2xl glass p-1">
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Skills -->
+        <section id="skills" class="py-12">
+
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold">Skills</h2>
+                <p class="text-slate-400 mt-2 max-w-xl">
+                    Technical skills I use to build modern web experiences.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
+                <!-- Skill card -->
+                <div
+                    class="glass p-4 rounded-lg flex items-center gap-3 border border-white/3 hover:scale-105 transform transition animate-fadeIn">
+                    <div
+                        class="w-12 h-12 rounded-lg flex items-center justify-center bg-gradient-to-br from-sky-500 to-indigo-500 shadow">
+                        <span class="text-white font-bold text-lg">R</span>
+                    </div>
+                    <div>
+                        <div class="font-semibold">React.js</div>
+                        <div class="text-xs text-slate-400">SPA & components</div>
+                    </div>
+                </div>
+
+                <div
+                    class="glass p-4 rounded-lg flex items-center gap-3 border border-white/3 hover:scale-105 transform transition animate-fadeIn">
+                    <div
+                        class="w-12 h-12 rounded-lg flex items-center justify-center bg-gradient-to-br from-primary to-accent shadow">
+                        <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M14.828 9.172a4 4 0 010 5.656M9.17 14.828a4 4 0 010-5.656" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="font-semibold">HTML & CSS</div>
+                        <div class="text-xs text-slate-400">
+                            Semantic markup & responsive layouts
+                        </div>
+                    </div>
+                </div>
+
+                <div
+                    class="glass p-4 rounded-lg flex items-center gap-3 border border-white/3 hover:scale-105 transform transition animate-fadeIn">
+                    <div
+                        class="w-12 h-12 rounded-lg flex items-center justify-center bg-gradient-to-br from-[#00ffa3] to-[#06b6d4] shadow">
+                        <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M12 19l9 2-7-9 2-9-9 7-9-7 2 9-7 9 9-2z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="font-semibold">Tailwind CSS</div>
+                        <div class="text-xs text-slate-400">Utility-first design</div>
+                    </div>
+                </div>
+
+                <div
+                    class="glass p-4 rounded-lg flex items-center gap-3 border border-white/3 hover:scale-105 transform transition animate-fadeIn">
+                    <div
+                        class="w-12 h-12 rounded-lg flex items-center justify-center bg-gradient-to-br from-black to-gray-700 shadow">
+                        <span class="text-white font-bold text-lg">N</span>
+                    </div>
+                    <div>
+                        <div class="font-semibold">Next.js</div>
+                        <div class="text-xs text-slate-400">React framework & SSR</div>
+                    </div>
+                </div>
+
+                <div
+                    class="glass p-4 rounded-lg flex items-center gap-3 border border-white/3 hover:scale-105 transform transition animate-fadeIn">
+                    <div
+                        class="w-12 h-12 rounded-lg flex items-center justify-center bg-gradient-to-br from-[#7c3aed] to-[#00ffa3] shadow">
+                        <svg class="w-6 h-6" fill="none" stroke="white" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                d="M12 2l3 7h7l-5.5 4 2 7L12 17l-6.5 3 2-7L2 9h7z" />
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="font-semibold">JavaScript</div>
+                        <div class="text-xs text-slate-400">ESNext, DOM, tooling</div>
+                    </div>
+                </div>
+
+
+
+                <!-- New Skills -->
+
+
+                <div
+                    class="glass p-4 rounded-lg flex items-center gap-3 border border-white/3 hover:scale-105 transform transition animate-fadeIn">
+                    <div
+                        class="w-12 h-12 rounded-lg flex items-center justify-center bg-gradient-to-br from-green-400 to-emerald-600 shadow">
+                        <span class="text-white font-bold text-lg">SEO</span>
+                    </div>
+                    <div>
+                        <div class="font-semibold">SEO</div>
+                        <div class="text-xs text-slate-400">Optimization & ranking</div>
+                    </div>
+                </div>
+
+                <div
+                    class="glass p-4 rounded-lg flex items-center gap-3 border border-white/3 hover:scale-105 transform transition animate-fadeIn">
+                    <div
+                        class="w-12 h-12 rounded-lg flex items-center justify-center bg-gradient-to-br from-red-600 to-pink-600 shadow">
+                        <span class="text-white font-bold text-lg">L</span>
+                    </div>
+                    <div>
+                        <div class="font-semibold">Laravel</div>
+                        <div class="text-xs text-slate-400">Backend framework</div>
+                    </div>
+                </div>
+
+                <div
+                    class="glass p-4 rounded-lg flex items-center gap-3 border border-white/3 hover:scale-105 transform transition animate-fadeIn">
+                    <div
+                        class="w-12 h-12 rounded-lg flex items-center justify-center bg-gradient-to-br from-indigo-600 to-purple-600 shadow">
+                        <span class="text-white font-bold text-lg">PHP</span>
+                    </div>
+                    <div>
+                        <div class="font-semibold">PHP</div>
+                        <div class="text-xs text-slate-400">Server-side scripting</div>
+                    </div>
+                </div>
+
+                <div
+                    class="glass p-4 rounded-lg flex items-center gap-3 border border-white/3 hover:scale-105 transform transition animate-fadeIn">
+                    <div
+                        class="w-12 h-12 rounded-lg flex items-center justify-center bg-gradient-to-br from-blue-500 to-cyan-400 shadow">
+                        <span class="text-white font-bold text-lg">TS</span>
+                    </div>
+                    <div>
+                        <div class="font-semibold">TypeScript</div>
+                        <div class="text-xs text-slate-400">Typed JavaScript</div>
+                    </div>
+                </div>
+
+                <div
+                    class="glass p-4 rounded-lg flex items-center gap-3 border border-white/3 hover:scale-105 transform transition animate-fadeIn">
+                    <div
+                        class="w-12 h-12 rounded-lg flex items-center justify-center bg-gradient-to-br from-orange-500 to-yellow-500 shadow">
+                        <span class="text-white font-bold text-lg">B</span>
+                    </div>
+                    <div>
+                        <div class="font-semibold">Bootstrap</div>
+                        <div class="text-xs text-slate-400">Responsive design</div>
+                    </div>
+                </div>
+
+
+
+                <div
+                    class="glass p-4 rounded-lg flex items-center gap-3 border border-white/3 hover:scale-105 transform transition animate-fadeIn">
+                    <div
+                        class="w-12 h-12 rounded-lg flex items-center justify-center bg-gradient-to-br from-gray-800 to-black shadow">
+                        <span class="text-white font-bold text-lg">Git</span>
+                    </div>
+                    <div>
+                        <div class="font-semibold">GitHub</div>
+                        <div class="text-xs text-slate-400">Version control</div>
+                    </div>
+                </div>
+
+                <div
+                    class="glass p-4 rounded-lg flex items-center gap-3 border border-white/3 hover:scale-105 transform transition animate-fadeIn">
+                    <div
+                        class="w-12 h-12 rounded-lg flex items-center justify-center bg-gradient-to-br from-orange-400 to-red-500 shadow">
+                        <span class="text-white font-bold text-lg">P</span>
+                    </div>
+                    <div>
+                        <div class="font-semibold">Postman</div>
+                        <div class="text-xs text-slate-400">API testing & docs</div>
+                    </div>
+                </div>
+
+
+
+                <div
+                    class="glass p-4 rounded-lg flex items-center gap-3 border border-white/3 hover:scale-105 transform transition animate-fadeIn">
+                    <div
+                        class="w-12 h-12 rounded-lg flex items-center justify-center bg-gradient-to-br from-green-500 to-lime-500 shadow">
+                        <span class="text-white font-bold text-lg">PG</span>
+                    </div>
+                    <div>
+                        <div class="font-semibold">Payment Gateway</div>
+                        <div class="text-xs text-slate-400">
+                            Stripe, Razorpay, PayPal integrations
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="py-12">
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold">Projects</h2>
+                <p class="text-slate-400 mt-2 max-w-xl">
+                    Selected projects showcasing design, frontend and performance work.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <!-- FrothTestOps -->
+                <article
+                    class="bg-[#071026] rounded-xl overflow-hidden border border-white/4 shadow-lg hover:scale-[1.02] transform transition animate-fadeIn">
+                    <img src="/assest/froth.png" alt="FrothTestOps" class="w-full h-44 object-cover" />
+                    <div class="p-4">
+                        <h3 class="font-semibold">FrothTestOps – Website & Web App 2025</h3>
+                        <p class="text-sm text-slate-400 mt-2">
+                            SEO-friendly Next.js SSR website and ticketing web app with split
+                            payment gateway integration and scalable backend.
+                        </p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <a href="#"
+                                class="text-sm inline-flex items-center gap-2 text-white/90 bg-gradient-to-r from-primary to-accent px-3 py-2 rounded-md">View
+                                live</a>
+                            <div class="text-xs text-slate-400">
+                                Tech: Next.js, Payment Gateway
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- LarkBrennet -->
+                <article
+                    class="bg-[#071026] rounded-xl overflow-hidden border border-white/4 shadow-lg hover:scale-[1.02] transform transition animate-fadeIn">
+                    <img src="/assest/lark.png" alt="LarkBrennet" class="w-full h-44 object-cover" />
+                    <div class="p-4">
+                        <h3 class="font-semibold">LarkBrennet – E-Commerce Website 2025</h3>
+                        <p class="text-sm text-slate-400 mt-2">
+                            T-shirt store with React.js frontend and Laravel backend. Integrated
+                            Razorpay payments, cart, and order management.
+                        </p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <a href="#"
+                                class="text-sm inline-flex items-center gap-2 text-white/90 bg-gradient-to-r from-primary to-accent px-3 py-2 rounded-md">Case
+                                study</a>
+                            <div class="text-xs text-slate-400">
+                                Tech: React.js, Laravel, Razorpay
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Powerage Performance -->
+                <article
+                    class="bg-[#071026] rounded-xl overflow-hidden border border-white/4 shadow-lg hover:scale-[1.02] transform transition animate-fadeIn">
+                    <img src="/assest/power.png" alt="Powerage Performance" class="w-full h-44 object-cover" />
+                    <div class="p-4">
+                        <h3 class="font-semibold">
+                            Powerage Performance – E-Commerce Website 2025
+                        </h3>
+                        <p class="text-sm text-slate-400 mt-2">
+                            Two-wheeler exhaust store built with Next.js SSR and Laravel backend.
+                            Optimized for SEO and mobile with Razorpay integration.
+                        </p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <a href="#"
+                                class="text-sm inline-flex items-center gap-2 text-white/90 bg-gradient-to-r from-primary to-accent px-3 py-2 rounded-md">Explore</a>
+                            <div class="text-xs text-slate-400">
+                                Tech: Next.js, Laravel, Razorpay
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Digital Compatibility -->
+                <article
+                    class="bg-[#071026] rounded-xl overflow-hidden border border-white/4 shadow-lg hover:scale-[1.02] transform transition animate-fadeIn">
+                    <img src="/assest/dcf.png" alt="Digital Compatibility" class="w-full h-44 object-cover" />
+                    <div class="p-4">
+                        <h3 class="font-semibold">
+                            Digital Compatibility (DCF) – Website 2024
+                        </h3>
+                        <p class="text-sm text-slate-400 mt-2">
+                            React.js frontend with backend integration. Added dynamic blog pages
+                            and scalable features for growth.
+                        </p>
+                        <div class="mt-4 flex items-center justify-between">
+                            <a href="#"
+                                class="text-sm inline-flex items-center gap-2 text-white/90 bg-gradient-to-r from-primary to-accent px-3 py-2 rounded-md">View
+                                live</a>
+                            <div class="text-xs text-slate-400">Tech: React.js</div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+
+        <section id="experience" class="py-12">
+            <div class="mb-8">
+                <h2 class="text-2xl font-bold">Work Experience</h2>
+                <p class="text-slate-400 mt-2 max-w-xl">
+                    A step-by-step journey of my career, training, and professional growth.
+                </p>
+            </div>
+
+            <div class="relative border-l border-slate-700">
+                <!-- Experience Item -->
+                <div class="ml-6 mb-10">
+                    <div
+                        class="absolute -left-3 w-6 h-6 bg-gradient-to-r from-primary to-accent rounded-full border-2 border-white">
+                    </div>
+                    <div class="bg-[#071026] rounded-xl p-6 shadow-lg border border-white/5">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                            <h3 class="text-lg font-semibold">Innothrust</h3>
+                            <span class="text-sm text-slate-400">Jan 2025 – Present</span>
+                        </div>
+                        <p class="text-sm text-slate-400 mt-1"> Junior Software Engineer · Coimbatore, Tamil Nadu</p>
+                        <ul class="list-disc list-inside mt-3 space-y-1 text-slate-300 text-sm">
+                            <li>React.js, Next.js, Laravel, REST APIs</li>
+                            <li>Built responsive web applications with modern frameworks.</li>
+                            <li>Developed SEO-friendly solutions with Next.js SSR + REST API integrations.</li>
+                            <li>Collaborated with teams to deliver scalable, client-focused applications.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Experience Item -->
+
+
+                <!-- Experience Item -->
+                <div class="ml-6">
+                    <div
+                        class="absolute -left-3 w-6 h-6 bg-gradient-to-r from-primary to-accent rounded-full border-2 border-white">
+                    </div>
+                    <div class="bg-[#071026] rounded-xl p-6 shadow-lg border border-white/5">
+                        <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between">
+                            <h3 class="text-lg font-semibold">Technox Technologies (Unit of Innothrust)</h3>
+                            <span class="text-sm text-slate-400">Oct 2024 – Dec 2024</span>
+                        </div>
+                        <p class="text-sm text-slate-400 mt-1">Intern · Coimbatore, Tamil Nadu</p>
+                        <ul class="list-disc list-inside mt-3 space-y-1 text-slate-300 text-sm">
+                            <li>React.js, Laravel, REST APIs, GitHub</li>
+                            <li>Assisted in frontend (React.js) and backend (Laravel) development.</li>
+                            <li>Gained experience in GitHub workflows and API integrations.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Contact -->
+        <section id="contact" class="py-12">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-start">
+                <div class="space-y-4 animate-fadeIn">
+                    <h2 class="text-2xl font-bold">Get in touch</h2>
+                    <p class="text-slate-400 max-w-md">
+                        Interested in working together or just want to say hi? Reach out directly using the details
+                        below.
+                    </p>
+
+                    <div class="mt-6 space-y-3 text-sm">
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                                <svg class="w-5 h-5" fill="none" stroke="white" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Email</div>
+                                <div class="text-slate-400 text-xs">vjaswin99@gmail.com</div>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-3">
+                            <div
+                                class="w-10 h-10 rounded-lg bg-gradient-to-br from-primary to-accent flex items-center justify-center">
+                                <svg class="w-5 h-5" fill="none" stroke="white" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                                        d="M3 7v6a2 2 0 002 2h3l4 4V9l-4 4H5a2 2 0 01-2-2V7z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <div class="font-semibold">Contact Number</div>
+                                <div class="text-slate-400 text-xs">9080355069</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Footer -->
+        <footer class="py-10 border-t border-white/6 mt-12">
+            <div class="max-w-6xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-4">
+                <div class="text-sm text-slate-400">© <span class="font-semibold text-white">Your Name</span> — Crafted
+                    with neon gradients</div>
+                <div class="flex gap-3">
+                    <a href="#" class="text-slate-300/90 hover:text-white">GitHub</a>
+                    <a href="#" class="text-slate-300/90 hover:text-white">LinkedIn</a>
+                    <a href="#" class="text-slate-300/90 hover:text-white">Twitter</a>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- Small accessibility: skip to content -->
+    <a class="sr-only" href="#home">Skip to content</a>
+</body>
+
+</html>
