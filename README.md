@@ -24,57 +24,55 @@ Hi! 👋 I'm a passionate Full Stack Web Developer with experience working on 30
 ---
 
  🧩 HTML & CSS Projects
-- Robotico Digital  
-- Lynsys Cloud Solution  
-- Innothrust  
-- Simply Indian  
-- Autohome Products  
+- [Robotico Digital](https://roboticodigital.com/)
+- [Innothrust](https://innothrust.com/)  
+- [Simply Indian](https://simplyindian.my/) 
+- [Autohome Products](https://autohomeproducts.com/)
 
 ---
 
  ⚛️ React.js Projects
-- Froth CRM – Customer Relationship Management system  
-- Froth Desk – Support desk application  
-- Jaanvista Global – Business solutions platform  
-- Lark Brennet (Dev) – Startup web platform  
-- DCF Saudi Arabia – Corporate website  
+- [Froth CRM](https://frothcrm.com/) – Customer Relationship Management system
+- [Froth Desk](https://frothdesk.com/) – Support desk application
+- [Jaanvista Global](https://jaanvista.com/) – Business solutions platform
+- [Lark Brennet (Dev)](https://dev.larkbrennet.com/) – Startup web platform
+- [DCF Saudi Arabia](https://dcf.sa/) – Corporate site 
 
 ---
 
  ▲ Next.js Projects
-- Froth TestOps  
-- Technox Technologies  
-- TakeFit Gym  
-- Clato KL  
-- Powerage Performance  
-- Supera Chemicals  
+- [Froth TestOps](https://frothtestops.com/)
+- [Technox Technologies](https://technox.in/)
+- [TakeFit Gym](https://takefitgym.com/)
+- [Clato KL](https://clato-kl.com/)
+- [Powerage Performance](https://powerageperformance.com/)
+- [Supera Chemicals](https://superachemicals.com/) 
 
 ---
 
  🏢 Laravel & Blade Projects
-- Mashcall  
-- Reverd  
-- Minerva College of Catering  
-- Admin Panel Robotico Digital  
-- Jaanvista Global   
-- Minvera Foods  
+- [Reverd](https://reverd.earth/)
+- [Minerva College of Catering](https://michm.in/)
+- [CMS Robotico Digital](https://rd-api.roboticodigital.com/login)
+- [Jaanvista Global](https://jaanvista.com/)
+- [Shuki Exports](https://shukiexports.com/)
+- [Minvera Foods](https://minervafoods.in/)
 
 ---
 
  🏘 Real Estate & Services
-- Classic Escapes  
-- Sreedaksha Property  
-- Sreedaksha Landshapers  
-- Sivasri Group  
+- [Classic Escapes](https://classicescapes.in/)
+- [Sreedaksha Property](https://sreedaksha.com/)
+- [Sreedaksha Landshapers](https://sreedakshalandshapers.com/)
+- [Sivasri Group](https://www.sivasrigroup.com/) 
 
 ---
 
  🛍 E-Commerce Projects
-- Fascino Dresses by Shyn  
-- Lark Brennet (Dev) – React-based branding platform  
-- Supera  
-- FeelGoodNatures  
-- Powerage Performance 
+- [Fascino Dresses by Shyn](https://www.fascinodressesbyshyn.com/)
+- [Lark Brennet (Dev)](https://dev.larkbrennet.com/) – React.js-based product showcase and branding
+- [Supera](https://supera.in/)
+- [FeelGoodNatures](https://feelgoodnatures.com/)
 
 ---
 
